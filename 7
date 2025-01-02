@@ -1,0 +1,15 @@
+public class Solution {
+    public int Reverse(int x) {
+        long reversed = 0;
+        while (x!=0) {
+            int remainder = x%10;
+            x/=10;
+            reversed = reversed * 10 + remainder;
+        }
+        if (reversed>Int32.MaxValue || reversed<Int32.MinValue)
+        {
+            return 0;
+        }
+        return (int)reversed;
+    }
+}
